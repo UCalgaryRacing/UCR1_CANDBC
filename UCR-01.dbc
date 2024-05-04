@@ -93,6 +93,8 @@ BO_ 1541 EncoderPositions: 8 SteeringWheel
  SG_ Encoder3 : 16|8@1+ (1,0) [0|0] ""  Kvaser
  SG_ Encoder4 : 24|8@1+ (1,0) [0|0] ""  Kvaser
 
+BO_ 1 NewMessage_0001: 8 Vector__XXX
+
 
 
 CM_ BU_ FrontBoard "";
