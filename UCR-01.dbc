@@ -125,6 +125,9 @@ BO_ 1555 RearStrainGauges2: 20 BackBoard
  SG_ Gauge5 : 96|24@1+ (1,0) [0|0] "" Vector__XXX
  SG_ Gauge6 : 120|24@1+ (1,0) [0|0] "" Vector__XXX
 
+BO_ 100 GPSBestPos: 64 Vector__XXX
+ SG_ NewSignal_0001 : 0|32@1+ (1,0) [0|0] "" Vector__XXX
+
 
 
 CM_ BU_ FrontBoard "";
@@ -146,4 +149,5 @@ BA_ "VFrameFormat" BO_ 1552 14;
 BA_ "VFrameFormat" BO_ 1553 14;
 BA_ "VFrameFormat" BO_ 1554 14;
 BA_ "VFrameFormat" BO_ 1555 14;
+BA_ "VFrameFormat" BO_ 100 14;
 
