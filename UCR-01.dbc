@@ -565,6 +565,15 @@ BO_ 1280 PDM1: 8 PDM
  SG_ InternalRailVoltage : 40|8@1- (0.0615,0) [0|15.68] "" Vector__XXX
  SG_ ResetSource : 48|8@1+ (1,0) [0|0] "" Vector__XXX
 
+BO_ 1312 PDM2: 7 PDM
+ SG_ AccumulatorCurrent : 0|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ TCUCurrent : 8|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ BamocarCurrent : 16|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ PumpsCurrent : 24|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ TSALCurrent : 32|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ DAQCurrent : 40|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ DisplayKvaserCurrent : 48|8@1+ (1,0) [0|0] "" Vector__XXX
+
 
 
 CM_ BU_ FrontBoard "";
