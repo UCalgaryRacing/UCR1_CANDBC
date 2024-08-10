@@ -138,8 +138,13 @@ BO_ 1555 RearStrainGauges2: 20 BackBoard
  SG_ Gauge5 : 96|24@1+ (1,0) [0|0] ""  Kvaser
  SG_ Gauge6 : 120|24@1+ (1,0) [0|0] ""  Kvaser
 
-BO_ 80 GPSBestPos: 64 GPS
- SG_ NewSignal_0001 : 0|32@1+ (1,0) [0|0] ""  Kvaser,SteeringWheel
+BO_ 80 GPSBestPos: 48 GPS
+ SG_ Latitude : 0|64@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Longitude : 64|64@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Altitude : 128|64@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ stdLatitude : 192|64@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ stdLongitude : 256|64@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ stdAltitude : 320|64@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
 
 BO_ 101 FrontFrequency: 16 FrontBoard
  SG_ Freq1 : 0|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
@@ -155,11 +160,11 @@ BO_ 102 RearFrequency: 16 BackBoard
 
 BO_ 513 Bamocar1: 6 TCU
  SG_ REGID : 0|8@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
- SG_ Byte1 : 8|8@1+ (1,0) [0|0] "" Vector__XXX
- SG_ Byte2 : 16|8@1+ (1,0) [0|0] "" Vector__XXX
- SG_ Byte3 : 24|8@1+ (1,0) [0|0] "" Vector__XXX
- SG_ Byte4 : 32|8@1+ (1,0) [0|0] "" Vector__XXX
- SG_ Byte5 : 40|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Byte1 : 8|8@1+ (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Byte2 : 16|8@1+ (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Byte3 : 24|8@1+ (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Byte4 : 32|8@1+ (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Byte5 : 40|8@1+ (1,0) [0|0] ""  Kvaser,SteeringWheel
 
 BO_ 50 CellVoltage1: 64 ACULV
  SG_ Cell1 : 0|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
@@ -565,15 +570,6 @@ BO_ 1280 PDM1: 8 PDM
  SG_ InternalRailVoltage : 40|8@1- (0.0615,0) [0|15.68] "" Vector__XXX
  SG_ ResetSource : 48|8@1+ (1,0) [0|0] "" Vector__XXX
 
-BO_ 1312 PDM2: 7 PDM
- SG_ AccumulatorCurrent : 0|8@1+ (1,0) [0|0] "" Vector__XXX
- SG_ TCUCurrent : 8|8@1+ (1,0) [0|0] "" Vector__XXX
- SG_ BamocarCurrent : 16|8@1+ (1,0) [0|0] "" Vector__XXX
- SG_ PumpsCurrent : 24|8@1+ (1,0) [0|0] "" Vector__XXX
- SG_ TSALCurrent : 32|8@1+ (1,0) [0|0] "" Vector__XXX
- SG_ DAQCurrent : 40|8@1+ (1,0) [0|0] "" Vector__XXX
- SG_ DisplayKvaserCurrent : 48|8@1+ (1,0) [0|0] "" Vector__XXX
-
 
 
 CM_ BU_ FrontBoard "";
@@ -622,6 +618,12 @@ BA_ "VFrameFormat" BO_ 6 14;
 BA_ "VFrameFormat" BO_ 100 14;
 BA_ "VFrameFormat" BO_ 8 14;
 BA_ "VFrameFormat" BO_ 30 14;
+SIG_VALTYPE_ 80 Latitude : 2;
+SIG_VALTYPE_ 80 Longitude : 2;
+SIG_VALTYPE_ 80 Altitude : 2;
+SIG_VALTYPE_ 80 stdLatitude : 2;
+SIG_VALTYPE_ 80 stdLongitude : 2;
+SIG_VALTYPE_ 80 stdAltitude : 2;
 SIG_VALTYPE_ 101 Freq1 : 1;
 SIG_VALTYPE_ 101 Freq2 : 1;
 SIG_VALTYPE_ 101 Freq3 : 1;
