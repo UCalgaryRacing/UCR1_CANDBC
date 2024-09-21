@@ -571,6 +571,25 @@ BO_ 1280 PDM1: 8 PDM
  SG_ InternalRailVoltage : 40|8@1- (0.0615,0) [0|15.68] "" Vector__XXX
  SG_ ResetSource : 48|8@1+ (1,0) [0|0] "" Vector__XXX
 
+BO_ 150 GPSBestVel: 5 GPS
+ SG_ VelType : 0|4@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Latency : 4|4@1- (1,0) [0|0] "" Vector__XXX
+ SG_ DifferentialAge : 8|4@1- (1,0) [0|0] "" Vector__XXX
+ SG_ HorSpeed : 12|8@1- (1,0) [0|0] "" Vector__XXX
+ SG_ TrkGnd : 20|8@1- (1,0) [0|0] "" Vector__XXX
+ SG_ VertSpd : 28|8@1- (1,0) [0|0] "" Vector__XXX
+
+BO_ 151 IMURATEPVA: 64 GPS
+ SG_ Latitude : 0|8@1- (1,0) [0|0] "" Vector__XXX
+ SG_ Longitude : 8|8@1- (1,0) [0|0] "" Vector__XXX
+ SG_ Height : 16|8@1- (1,0) [0|0] "" Vector__XXX
+ SG_ NorthVelocity : 24|8@1- (1,0) [0|0] "" Vector__XXX
+ SG_ EastVelocity : 32|8@1- (1,0) [0|0] "" Vector__XXX
+ SG_ UpVelocity : 40|8@1- (1,0) [0|0] "" Vector__XXX
+ SG_ Roll : 48|8@1- (1,0) [0|0] "" Vector__XXX
+ SG_ Pitch : 56|8@1- (1,0) [0|0] "" Vector__XXX
+ SG_ Azimuth : 64|8@1- (1,0) [0|0] "" Vector__XXX
+
 
 
 CM_ BU_ FrontBoard "";
@@ -619,6 +638,8 @@ BA_ "VFrameFormat" BO_ 6 14;
 BA_ "VFrameFormat" BO_ 100 14;
 BA_ "VFrameFormat" BO_ 8 14;
 BA_ "VFrameFormat" BO_ 30 14;
+BA_ "VFrameFormat" BO_ 150 14;
+BA_ "VFrameFormat" BO_ 151 14;
 SIG_VALTYPE_ 80 Latitude : 2;
 SIG_VALTYPE_ 80 Longitude : 2;
 SIG_VALTYPE_ 80 Altitude : 2;
@@ -967,4 +988,18 @@ SIG_VALTYPE_ 40 ChargeStatus1 : 1;
 SIG_VALTYPE_ 40 ChargeStatus2 : 1;
 SIG_VALTYPE_ 1280 PDMBattVoltage : 1;
 SIG_VALTYPE_ 1280 InternalRailVoltage : 1;
+SIG_VALTYPE_ 150 Latency : 1;
+SIG_VALTYPE_ 150 DifferentialAge : 1;
+SIG_VALTYPE_ 150 HorSpeed : 2;
+SIG_VALTYPE_ 150 TrkGnd : 2;
+SIG_VALTYPE_ 150 VertSpd : 2;
+SIG_VALTYPE_ 151 Latitude : 2;
+SIG_VALTYPE_ 151 Longitude : 2;
+SIG_VALTYPE_ 151 Height : 2;
+SIG_VALTYPE_ 151 NorthVelocity : 2;
+SIG_VALTYPE_ 151 EastVelocity : 2;
+SIG_VALTYPE_ 151 UpVelocity : 2;
+SIG_VALTYPE_ 151 Roll : 2;
+SIG_VALTYPE_ 151 Pitch : 2;
+SIG_VALTYPE_ 151 Azimuth : 2;
 
