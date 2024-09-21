@@ -159,7 +159,7 @@ BO_ 102 RearFrequency: 16 BackBoard
  SG_ Freq3 : 64|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
  SG_ Freq4 : 96|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
 
-BO_ 513 Bamocar1: 6 TCU
+BO_ 513 BamocarRxData: 6 TCU
  SG_ REGID : 0|8@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
  SG_ Byte1 : 8|8@1+ (1,0) [0|0] ""  Kvaser,SteeringWheel
  SG_ Byte2 : 16|8@1+ (1,0) [0|0] ""  Kvaser,SteeringWheel
@@ -589,6 +589,10 @@ BO_ 151 IMURATEPVA: 64 GPS
  SG_ Roll : 48|8@1- (1,0) [0|0] "" Vector__XXX
  SG_ Pitch : 56|8@1- (1,0) [0|0] "" Vector__XXX
  SG_ Azimuth : 64|8@1- (1,0) [0|0] "" Vector__XXX
+
+BO_ 385 BamocarTxData: 4 Bamocar
+ SG_ REGID : 0|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Data : 8|16@1+ (1,0) [0|0] "" Vector__XXX
 
 
 
