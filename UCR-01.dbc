@@ -738,6 +738,42 @@ BO_ 16 PDM1: 8 PDM
  SG_ InternalRailVoltage : 40|8@1- (0.0615,0) [0|0] ""  Kvaser,SteeringWheel
  SG_ ResetSource : 48|8@1+ (1,0) [0|0] ""  Kvaser,SteeringWheel
 
+BO_ 60 IMURATEPVAS_week: 4 GPS
+ SG_ GNSS_week : 0|32@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 61 IMURATEPVAS_seconds: 8 GPS
+ SG_ GNSS_seconds : 0|64@1- (1,0) [0|0] "" Vector__XXX
+
+BO_ 62 IMURATEPVAS_lat: 8 GPS
+ SG_ latitude : 0|64@1- (1,0) [0|0] "" Vector__XXX
+
+BO_ 63 IMURATEPVAS_long: 8 GPS
+ SG_ longitude : 0|64@1- (1,0) [0|0] "" Vector__XXX
+
+BO_ 64 IMURATEPVAS_height: 8 GPS
+ SG_ height : 0|64@1- (1,0) [0|0] "" Vector__XXX
+
+BO_ 65 IMURATEPVAS_nvel: 8 GPS
+ SG_ north_velocity : 0|64@1- (1,0) [0|0] "" Vector__XXX
+
+BO_ 66 IMURATEPVAS_evel: 8 GPS
+ SG_ east_velocity : 0|64@1- (1,0) [0|0] "" Vector__XXX
+
+BO_ 67 IMURATEPVAS_uvel: 8 GPS
+ SG_ up_velocity : 0|64@1- (1,0) [0|0] "" Vector__XXX
+
+BO_ 68 IMURATEPVAS_roll: 8 GPS
+ SG_ roll : 0|64@1- (1,0) [0|0] "" Vector__XXX
+
+BO_ 69 IMURATEPVAS_pitch: 8 GPS
+ SG_ imu_pitch : 0|64@1- (1,0) [0|0] "" Vector__XXX
+
+BO_ 70 IMURATEPVAS_azimuth: 8 GPS
+ SG_ imu_azimuth : 0|64@1- (1,0) [0|0] "" Vector__XXX
+
+BO_ 71 IMURATEPVAS_status: 1 GPS
+ SG_ log_status : 0|8@1+ (1,0) [0|0] "" Vector__XXX
+
 
 
 SIG_VALTYPE_ 5 PackVoltage : 1;
@@ -754,4 +790,14 @@ SIG_VALTYPE_ 21 Freq3 : 1;
 SIG_VALTYPE_ 21 Freq4 : 1;
 SIG_VALTYPE_ 16 PDMBattVoltage : 1;
 SIG_VALTYPE_ 16 InternalRailVoltage : 1;
+SIG_VALTYPE_ 61 GNSS_seconds : 2;
+SIG_VALTYPE_ 62 latitude : 2;
+SIG_VALTYPE_ 63 longitude : 2;
+SIG_VALTYPE_ 64 height : 2;
+SIG_VALTYPE_ 65 north_velocity : 2;
+SIG_VALTYPE_ 66 east_velocity : 2;
+SIG_VALTYPE_ 67 up_velocity : 2;
+SIG_VALTYPE_ 68 roll : 2;
+SIG_VALTYPE_ 69 imu_pitch : 2;
+SIG_VALTYPE_ 70 imu_azimuth : 2;
 
