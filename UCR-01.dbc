@@ -36,42 +36,14 @@ BS_:
 BU_: FrontBoard BackBoard Kvaser SteeringWheel TCU GPS ACULV Bamocar PDM
 
 
-BO_ 3221225472 VECTOR__INDEPENDENT_SIG_MSG: 0 Vector__XXX
- SG_ NewSignal_0009 : 0|8@1+ (1,0) [0|0] "" Vector__XXX
- SG_ Frequency1 : 0|64@1- (1,0) [0|0] ""  FrontBoard,Kvaser,SteeringWheel
- SG_ Frequency2 : 64|64@1- (1,0) [0|0] ""  FrontBoard,Kvaser,SteeringWheel
- SG_ Frequency3 : 128|64@1- (1,0) [0|0] ""  FrontBoard,Kvaser,SteeringWheel
- SG_ Frequency4 : 192|64@1- (1,0) [0|0] ""  FrontBoard,Kvaser,SteeringWheel
- SG_ Frequency1 : 0|64@1- (1,0) [0|0] ""  BackBoard,Kvaser,SteeringWheel
- SG_ Frequency2 : 64|64@1- (1,0) [0|0] ""  BackBoard,Kvaser,SteeringWheel
- SG_ Frequency3 : 128|64@1- (1,0) [0|0] ""  BackBoard,Kvaser,SteeringWheel
- SG_ Frequency4 : 192|64@1- (1,0) [0|0] ""  BackBoard,Kvaser,SteeringWheel
- SG_ AccumulatorVoltage : 0|32@1- (1,0) [0|0] "" Vector__XXX
- SG_ TractiveVoltage : 0|32@1- (1,0) [0|0] "" Vector__XXX
- SG_ InputState_Diagnostics : 0|8@1+ (1,0) [0|0] "" Vector__XXX
- SG_ CompoundID : 0|8@1+ (1,0) [0|0] "" Vector__XXX
- SG_ DeviceInfo : 48|8@1+ (1,0) [0|0] "" Vector__XXX
- SG_ OutputLoad : 40|8@1+ (1,0) [0|0] "" Vector__XXX
- SG_ OutputCurrent : 32|8@1+ (1,0) [0|0] "" Vector__XXX
- SG_ OutputVoltage : 24|8@1+ (1,0) [0|0] "" Vector__XXX
- SG_ OutputState : 16|8@1+ (1,0) [0|0] "" Vector__XXX
- SG_ InputVoltage : 8|8@1+ (1,0) [0|0] "" Vector__XXX
- SG_ Byte2 : 0|8@1+ (1,0) [0|0] "" Vector__XXX
- SG_ Byte5 : 0|8@1+ (1,0) [0|0] "" Vector__XXX
- SG_ Byte4 : 0|8@1+ (1,0) [0|0] "" Vector__XXX
- SG_ Byte3 : 0|8@1+ (1,0) [0|0] "" Vector__XXX
- SG_ AirTemp : 0|32@1+ (1,0) [0|0] ""  Kvaser,SteeringWheel
- SG_ IGBTTemp : 0|32@1+ (1,0) [0|0] ""  Kvaser,SteeringWheel
- SG_ MotorTemp : 0|32@1+ (1,0) [0|0] ""  Kvaser,SteeringWheel
-
 BO_ 259 FrontAnalog: 16 FrontBoard
- SG_ Analog1 : 0|16@1+ (1,0) [0|0] ""  FrontBoard,Kvaser,SteeringWheel
- SG_ Analog2 : 16|16@1+ (1,0) [0|0] ""  FrontBoard,Kvaser,SteeringWheel
- SG_ Analog3 : 32|16@1+ (1,0) [0|0] ""  FrontBoard,Kvaser,SteeringWheel
- SG_ Analog4 : 48|16@1+ (1,0) [0|0] ""  FrontBoard,Kvaser,SteeringWheel
- SG_ Analog5 : 64|16@1+ (1,0) [0|0] ""  FrontBoard,Kvaser,SteeringWheel
- SG_ Analog6 : 80|16@1+ (1,0) [0|0] ""  FrontBoard,Kvaser,SteeringWheel
- SG_ Analog7 : 96|16@1+ (1,0) [0|0] ""  FrontBoard,Kvaser,SteeringWheel
+ SG_ LeftRad : 0|16@1+ (1,0) [0|0] ""  FrontBoard,Kvaser,SteeringWheel
+ SG_ RightRad : 16|16@1+ (1,0) [0|0] ""  FrontBoard,Kvaser,SteeringWheel
+ SG_ FrontRightPot : 32|16@1+ (1,0) [0|0] ""  FrontBoard,Kvaser,SteeringWheel
+ SG_ FrontLeftPot : 48|16@1+ (1,0) [0|0] ""  FrontBoard,Kvaser,SteeringWheel
+ SG_ RearRightPot : 64|16@1+ (1,0) [0|0] ""  FrontBoard,Kvaser,SteeringWheel
+ SG_ RearLeftPot : 80|16@1+ (1,0) [0|0] ""  FrontBoard,Kvaser,SteeringWheel
+ SG_ SteeringAngle : 96|16@1+ (1,0) [0|0] ""  FrontBoard,Kvaser,SteeringWheel
  SG_ Analog8 : 112|16@1+ (1,0) [0|0] ""  FrontBoard,Kvaser,SteeringWheel
 
 BO_ 258 RearAnalog: 16 BackBoard
@@ -148,10 +120,10 @@ BO_ 80 GPSBestPos: 64 GPS
  SG_ gpsStatus : 384|8@1+ (1,0) [0|0] "" Vector__XXX
 
 BO_ 101 FrontFrequency: 16 FrontBoard
- SG_ Freq1 : 0|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
- SG_ Freq2 : 32|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
- SG_ Freq3 : 64|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
- SG_ Freq4 : 96|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ FrontLeft : 0|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ FrontRight : 32|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ RearRight : 64|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ RearLeft : 96|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
 
 BO_ 102 RearFrequency: 16 BackBoard
  SG_ Freq1 : 0|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
@@ -160,7 +132,7 @@ BO_ 102 RearFrequency: 16 BackBoard
  SG_ Freq4 : 96|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
 
 BO_ 513 BamocarRxData: 6 TCU
- SG_ REGID : 0|8@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ REGID : 0|8@1+ (1,0) [0|0] ""  Kvaser,SteeringWheel
  SG_ Byte1 : 8|8@1+ (1,0) [0|0] ""  Kvaser,SteeringWheel
  SG_ Byte2 : 16|8@1+ (1,0) [0|0] ""  Kvaser,SteeringWheel
  SG_ Byte3 : 24|8@1+ (1,0) [0|0] ""  Kvaser,SteeringWheel
@@ -591,6 +563,20 @@ BO_ 82 INS_IMU: 64 GPS
  SG_ azimuth : 320|64@1- (1,0) [0|0] "" Vector__XXX
  SG_ status : 384|8@1+ (1,0) [0|0] "" Vector__XXX
 
+BO_ 600 BamoCarReTransmit: 4 SteeringWheel
+ SG_ MotorTemp : 0|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ ControllerTemp : 16|16@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 1312 PDMCurrent: 8 Vector__XXX
+ SG_ AccumulatorCurrent : 0|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ TCUCurrent : 8|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ BamocarCurrent : 16|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ PumpsCurrent : 24|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ TSALCurrent : 32|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ DAQCurrent : 40|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ DisplayKvaserCurrent : 48|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ ShutdownResetCurrent : 56|8@1+ (1,0) [0|0] "" Vector__XXX
+
 
 
 CM_ BU_ FrontBoard "";
@@ -647,10 +633,10 @@ SIG_VALTYPE_ 80 Altitude : 2;
 SIG_VALTYPE_ 80 stdLatitude : 2;
 SIG_VALTYPE_ 80 stdLongitude : 2;
 SIG_VALTYPE_ 80 stdAltitude : 2;
-SIG_VALTYPE_ 101 Freq1 : 1;
-SIG_VALTYPE_ 101 Freq2 : 1;
-SIG_VALTYPE_ 101 Freq3 : 1;
-SIG_VALTYPE_ 101 Freq4 : 1;
+SIG_VALTYPE_ 101 FrontLeft : 1;
+SIG_VALTYPE_ 101 FrontRight : 1;
+SIG_VALTYPE_ 101 RearRight : 1;
+SIG_VALTYPE_ 101 RearLeft : 1;
 SIG_VALTYPE_ 102 Freq1 : 1;
 SIG_VALTYPE_ 102 Freq2 : 1;
 SIG_VALTYPE_ 102 Freq3 : 1;
