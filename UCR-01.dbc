@@ -39,11 +39,11 @@ BU_: FrontBoard BackBoard Kvaser SteeringWheel TCU GPS ACULV Bamocar PDM
 BO_ 259 FrontAnalog: 16 FrontBoard
  SG_ LeftRad : 0|16@1+ (1,0) [0|0] ""  FrontBoard,Kvaser,SteeringWheel
  SG_ RightRad : 16|16@1+ (1,0) [0|0] ""  FrontBoard,Kvaser,SteeringWheel
- SG_ FrontRightPot : 32|16@1+ (1,0) [0|0] ""  FrontBoard,Kvaser,SteeringWheel
- SG_ FrontLeftPot : 48|16@1+ (1,0) [0|0] ""  FrontBoard,Kvaser,SteeringWheel
- SG_ RearRightPot : 64|16@1+ (1,0) [0|0] ""  FrontBoard,Kvaser,SteeringWheel
- SG_ RearLeftPot : 80|16@1+ (1,0) [0|0] ""  FrontBoard,Kvaser,SteeringWheel
- SG_ SteeringAngle : 96|16@1+ (1,0) [0|0] ""  FrontBoard,Kvaser,SteeringWheel
+ SG_ FrontRightPot : 32|16@1+ (0.018315018315,0) [0|0] ""  FrontBoard,Kvaser,SteeringWheel
+ SG_ FrontLeftPot : 48|16@1+ (0.018315018315,0) [0|0] ""  FrontBoard,Kvaser,SteeringWheel
+ SG_ RearRightPot : 64|16@1+ (0.018315018315,0) [0|0] ""  FrontBoard,Kvaser,SteeringWheel
+ SG_ RearLeftPot : 80|16@1+ (0.018315018315,0) [0|0] ""  FrontBoard,Kvaser,SteeringWheel
+ SG_ SteeringAngle : 96|16@1+ (0.018315018315,0) [0|0] ""  FrontBoard,Kvaser,SteeringWheel
  SG_ Analog8 : 112|16@1+ (1,0) [0|0] ""  FrontBoard,Kvaser,SteeringWheel
 
 BO_ 258 RearAnalog: 16 BackBoard
