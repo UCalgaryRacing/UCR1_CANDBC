@@ -120,10 +120,10 @@ BO_ 80 GPSBestPos: 64 GPS
  SG_ gpsStatus : 384|8@1+ (1,0) [0|0] "" Vector__XXX
 
 BO_ 101 FrontFrequency: 16 FrontBoard
- SG_ FrontLeft : 0|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ RearRight : 0|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
  SG_ FrontRight : 32|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
- SG_ RearRight : 64|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
- SG_ RearLeft : 96|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ RearLeft : 64|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ FrontLeft : 96|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
 
 BO_ 102 RearFrequency: 16 BackBoard
  SG_ Freq1 : 0|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
@@ -567,7 +567,7 @@ BO_ 600 BamoCarReTransmit: 4 SteeringWheel
  SG_ MotorTemp : 0|16@1+ (1,0) [0|0] "" Vector__XXX
  SG_ ControllerTemp : 16|16@1+ (1,0) [0|0] "" Vector__XXX
 
-BO_ 1312 PDMCurrent: 8 Vector__XXX
+BO_ 1312 PDMCurrent: 8 PDM
  SG_ AccumulatorCurrent : 0|8@1+ (1,0) [0|0] "" Vector__XXX
  SG_ TCUCurrent : 8|8@1+ (1,0) [0|0] "" Vector__XXX
  SG_ BamocarCurrent : 16|8@1+ (1,0) [0|0] "" Vector__XXX
@@ -576,6 +576,14 @@ BO_ 1312 PDMCurrent: 8 Vector__XXX
  SG_ DAQCurrent : 40|8@1+ (1,0) [0|0] "" Vector__XXX
  SG_ DisplayKvaserCurrent : 48|8@1+ (1,0) [0|0] "" Vector__XXX
  SG_ ShutdownResetCurrent : 56|8@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 1680 PDMReTransmit: 6 SteeringWheel
+ SG_ PDMIntTemperature : 0|8@1+ (1,0) [0|125] "" Vector__XXX
+ SG_ PDMBattVoltage : 8|8@1- (0.1216,0) [0|31] "" Vector__XXX
+ SG_ GlobalErrorFlag : 16|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ TotalCurrent : 24|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ InternalRailVoltage : 32|8@1- (0.0615,0) [0|15.68] "" Vector__XXX
+ SG_ ResetSource : 40|8@1+ (1,0) [0|0] "" Vector__XXX
 
 
 
@@ -633,10 +641,10 @@ SIG_VALTYPE_ 80 Altitude : 2;
 SIG_VALTYPE_ 80 stdLatitude : 2;
 SIG_VALTYPE_ 80 stdLongitude : 2;
 SIG_VALTYPE_ 80 stdAltitude : 2;
-SIG_VALTYPE_ 101 FrontLeft : 1;
-SIG_VALTYPE_ 101 FrontRight : 1;
 SIG_VALTYPE_ 101 RearRight : 1;
+SIG_VALTYPE_ 101 FrontRight : 1;
 SIG_VALTYPE_ 101 RearLeft : 1;
+SIG_VALTYPE_ 101 FrontLeft : 1;
 SIG_VALTYPE_ 102 Freq1 : 1;
 SIG_VALTYPE_ 102 Freq2 : 1;
 SIG_VALTYPE_ 102 Freq3 : 1;
