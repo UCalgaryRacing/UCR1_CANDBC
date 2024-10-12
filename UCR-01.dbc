@@ -120,10 +120,10 @@ BO_ 80 GPSBestPos: 64 GPS
  SG_ gpsStatus : 384|8@1+ (1,0) [0|0] "" Vector__XXX
 
 BO_ 101 FrontFrequency: 16 FrontBoard
- SG_ RearRight : 0|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
- SG_ FrontRight : 32|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
- SG_ RearLeft : 64|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
- SG_ FrontLeft : 96|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ RearRight : 0|32@1- (0.048768,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ FrontRight : 32|32@1- (0.048768,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ RearLeft : 64|32@1- (0.048768,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ FrontLeft : 96|32@1- (0.048768,0) [0|0] ""  Kvaser,SteeringWheel
 
 BO_ 102 RearFrequency: 16 BackBoard
  SG_ Freq1 : 0|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
