@@ -585,6 +585,9 @@ BO_ 1680 PDMReTransmit: 6 SteeringWheel
  SG_ InternalRailVoltage : 32|8@1- (0.0615,0) [0|15.68] "" Vector__XXX
  SG_ ResetSource : 40|8@1+ (1,0) [0|0] "" Vector__XXX
 
+BO_ 4 PackCurrent: 4 ACULV
+ SG_ PackCurrent : 0|32@1- (1,0) [0|0] "" Vector__XXX
+
 
 
 CM_ BU_ FrontBoard "";
@@ -993,4 +996,5 @@ SIG_VALTYPE_ 82 up_vel : 2;
 SIG_VALTYPE_ 82 roll : 2;
 SIG_VALTYPE_ 82 pitch : 2;
 SIG_VALTYPE_ 82 azimuth : 2;
+SIG_VALTYPE_ 4 PackCurrent : 1;
 
