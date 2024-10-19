@@ -43,9 +43,12 @@ else:
     # csv_folder = input("Enter Directory Path with Kvaser Logs: ")
     # dir_name = input("Enter Directory Name you would like to store logs at: ")
     # dbc_path = "C:/Users/Steven/Documents/GitRepo/UCR1_CANDBC/UCR-01.dbc"
-    csv_folder = "C:/Users/Steven/OneDrive/Documents/UCalgary Racing/Testing new/2024-10-17"
-    dir_name = "C:/Users/Steven/Documents/GitRepo/DecodedLogs/2024-10-17"
-    dbc_path = "C:/Users/Steven/Documents/GitRepo/UCR1_CANDBC/UCR-01.dbc"
+    # csv_folder = "C:/Users/Steven/OneDrive/Documents/UCalgary Racing/Testing new/2024-10-17"
+    csv_folder = "C:/Users/steve/OneDrive/Documents/UCalgary Racing/Testing new/2024-10-17"
+    # dir_name = "C:/Users/Steven/Documents/GitRepo/DecodedLogs/2024-10-17"
+    dir_name = "C:/Users/steve/Documents/DecodedLogs/2024-10-17"
+    # dbc_path = "C:/Users/Steven/Documents/GitRepo/UCR1_CANDBC/UCR-01.dbc"
+    dbc_path = "C:/Users/steve/Documents/UCR1_CANDBC/UCR-01.dbc"
 
 cell_ids = range(50, 58)
 
@@ -65,6 +68,7 @@ for filename in os.listdir(csv_folder):
         output_csv_path = os.path.join(
             f"{dir_name}", f"decoded_{filename}"
         )
+        print(output_csv_path)
 
         with open(output_csv_path, mode="w", newline="") as output_csv_file:
             csv_writer = csv.writer(output_csv_file)

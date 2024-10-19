@@ -582,7 +582,7 @@ BO_ 1680 PDMReTransmit: 6 SteeringWheel
  SG_ PDMBattVoltage : 8|8@1- (0.1216,0) [0|31] "" Vector__XXX
  SG_ GlobalErrorFlag : 16|8@1+ (1,0) [0|0] "" Vector__XXX
  SG_ TotalCurrent : 24|8@1+ (1,0) [0|255] "" Vector__XXX
- SG_ InternalRailVoltage : 32|8@1- (0.0615,0) [0|15.68] "" Vector__XXX
+ SG_ InternalRailVoltage : 32|8@1+ (0.0615,0) [0|15.68] "" Vector__XXX
  SG_ ResetSource : 40|8@1+ (1,0) [0|0] "" Vector__XXX
 
 BO_ 4 PackCurrent: 4 ACULV
