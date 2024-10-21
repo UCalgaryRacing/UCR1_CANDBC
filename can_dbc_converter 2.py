@@ -44,11 +44,11 @@ else:
     # dir_name = input("Enter Directory Name you would like to store logs at: ")
     # dbc_path = "C:/Users/Steven/Documents/GitRepo/UCR1_CANDBC/UCR-01.dbc"
     # csv_folder = "C:/Users/Steven/OneDrive/Documents/UCalgary Racing/Testing new/2024-10-17"
-    csv_folder = "C:/Users/steve/OneDrive/Documents/UCalgary Racing/Testing new/2024-10-19"
+    csv_folder = "C:/Users/Steven/Downloads/DownloadedFiles/Raw Data"
     # dir_name = "C:/Users/Steven/Documents/GitRepo/DecodedLogs/2024-10-17"
-    dir_name = "C:/Users/steve/Documents/DecodedLogs/2024-10-17"
-    # dbc_path = "C:/Users/Steven/Documents/GitRepo/UCR1_CANDBC/UCR-01.dbc"
-    dbc_path = "C:/Users/steve/Documents/UCR1_CANDBC/UCR-01.dbc"
+    dir_name = "C:/Users/Steven/Downloads/DecodedLogs"
+    dbc_path = "C:/Users/Steven/Documents/GitRepo/UCR1_CANDBC/UCR-01.dbc"
+    # dbc_path = "C:/Users/steve/Documents/UCR1_CANDBC/UCR-01.dbc"
 
 cell_ids = range(50, 58)
 
