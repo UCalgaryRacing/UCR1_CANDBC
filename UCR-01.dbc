@@ -79,36 +79,36 @@ BO_ 200 EncoderPositions: 8 SteeringWheel
  SG_ Encoder4 : 24|8@1+ (1,0) [0|0] ""  Kvaser
 
 BO_ 1552 FrontStrainGauges1: 20 FrontBoard
- SG_ Gauge1 : 0|24@1+ (1,0) [0|0] ""  Kvaser
- SG_ Gauge2 : 24|24@1+ (1,0) [0|0] ""  Kvaser
- SG_ Gauge3 : 48|24@1+ (1,0) [0|0] ""  Kvaser
- SG_ Gauge4 : 72|24@1+ (1,0) [0|0] ""  Kvaser
- SG_ Gauge5 : 96|24@1+ (1,0) [0|0] ""  Kvaser
- SG_ Gauge6 : 120|24@1+ (1,0) [0|0] ""  Kvaser
+ SG_ FLPR : 0|24@1+ (1,0) [0|0] ""  Kvaser
+ SG_ FLRU : 24|24@1+ (1,0) [0|0] ""  Kvaser
+ SG_ FLFL : 48|24@1+ (1,0) [0|0] ""  Kvaser
+ SG_ FLRL : 72|24@1+ (1,0) [0|0] ""  Kvaser
+ SG_ FLFU : 96|24@1+ (1,0) [0|0] ""  Kvaser
+ SG_ FLS : 120|24@1+ (1,0) [0|0] ""  Kvaser
 
 BO_ 1553 FrontStrainGauges2: 20 FrontBoard
- SG_ Gauge1 : 0|24@1+ (1,0) [0|0] ""  Kvaser
- SG_ Gauge2 : 24|24@1+ (1,0) [0|0] ""  Kvaser
- SG_ Gauge3 : 48|24@1+ (1,0) [0|0] ""  Kvaser
- SG_ Gauge4 : 72|24@1+ (1,0) [0|0] ""  Kvaser
- SG_ Gauge5 : 96|24@1+ (1,0) [0|0] ""  Kvaser
- SG_ Gauge6 : 120|24@1+ (1,0) [0|0] ""  Kvaser
+ SG_ FRS : 0|24@1+ (1,0) [0|0] ""  Kvaser
+ SG_ FRFU : 24|24@1+ (1,0) [0|0] ""  Kvaser
+ SG_ FRFL : 48|24@1+ (1,0) [0|0] ""  Kvaser
+ SG_ FRRL : 72|24@1+ (1,0) [0|0] ""  Kvaser
+ SG_ FRRU : 96|24@1+ (1,0) [0|0] ""  Kvaser
+ SG_ FRPR : 120|24@1+ (1,0) [0|0] ""  Kvaser
 
 BO_ 1554 RearStrainGauges1: 20 BackBoard
- SG_ Gauge1 : 0|24@1+ (1,0) [0|0] ""  Kvaser
- SG_ Gauge2 : 24|24@1+ (1,0) [0|0] ""  Kvaser
- SG_ Gauge3 : 48|24@1+ (1,0) [0|0] ""  Kvaser
- SG_ Gauge4 : 72|24@1+ (1,0) [0|0] ""  Kvaser
- SG_ Gauge5 : 96|24@1+ (1,0) [0|0] ""  Kvaser
- SG_ Gauge6 : 120|24@1+ (1,0) [0|0] ""  Kvaser
+ SG_ RRT : 0|24@1+ (1,0) [0|0] ""  Kvaser
+ SG_ RRRL : 24|24@1+ (1,0) [0|0] ""  Kvaser
+ SG_ RRRU : 48|24@1+ (1,0) [0|0] ""  Kvaser
+ SG_ RRFL : 72|24@1+ (1,0) [0|0] ""  Kvaser
+ SG_ RRFU : 96|24@1+ (1,0) [0|0] ""  Kvaser
+ SG_ RRPR : 120|24@1+ (1,0) [0|0] ""  Kvaser
 
 BO_ 1555 RearStrainGauges2: 20 BackBoard
- SG_ Gauge1 : 0|24@1+ (1,0) [0|0] ""  Kvaser
- SG_ Gauge2 : 24|24@1+ (1,0) [0|0] ""  Kvaser
- SG_ Gauge3 : 48|24@1+ (1,0) [0|0] ""  Kvaser
- SG_ Gauge4 : 72|24@1+ (1,0) [0|0] ""  Kvaser
- SG_ Gauge5 : 96|24@1+ (1,0) [0|0] ""  Kvaser
- SG_ Gauge6 : 120|24@1+ (1,0) [0|0] ""  Kvaser
+ SG_ RLFL : 0|24@1+ (1,0) [0|0] ""  Kvaser
+ SG_ RLFU : 24|24@1+ (1,0) [0|0] ""  Kvaser
+ SG_ RLPR : 48|24@1+ (1,0) [0|0] ""  Kvaser
+ SG_ RLRU : 72|24@1+ (1,0) [0|0] ""  Kvaser
+ SG_ RLRL : 96|24@1+ (1,0) [0|0] ""  Kvaser
+ SG_ RLT : 120|24@1+ (1,0) [0|0] ""  Kvaser
 
 BO_ 80 GPSBestPos: 64 GPS
  SG_ Latitude : 0|64@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
@@ -564,8 +564,8 @@ BO_ 82 INS_IMU: 64 GPS
  SG_ status : 384|8@1+ (1,0) [0|0] "" Vector__XXX
 
 BO_ 600 BamoCarReTransmit: 4 SteeringWheel
- SG_ MotorTemp : 0|16@1+ (1,0) [0|0] "" Vector__XXX
- SG_ ControllerTemp : 16|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ MotorTempRaw : 0|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ ControllerTempRaw : 16|16@1+ (1,0) [0|0] "" Vector__XXX
 
 BO_ 1312 PDMCurrent: 8 PDM
  SG_ AccumulatorCurrent : 0|8@1+ (1,0) [0|0] "" Vector__XXX
@@ -587,6 +587,15 @@ BO_ 1680 PDMReTransmit: 6 SteeringWheel
 
 BO_ 4 PackCurrent: 4 ACULV
  SG_ PackCurrent : 0|32@1- (1,0) [0|0] "" Vector__XXX
+
+BO_ 1681 BamoCarConverted: 8 SteeringWheel
+ SG_ MotorTemp : 0|32@1- (1,0) [0|0] "" Vector__XXX
+ SG_ ControllerTemp : 32|32@1- (1,0) [0|0] "" Vector__XXX
+
+BO_ 1000 LapInfo: 64 SteeringWheel
+ SG_ StartPointLat : 0|64@1- (1,0) [0|0] "" Vector__XXX
+ SG_ StartPointLong : 64|64@1- (1,0) [0|0] "" Vector__XXX
+ SG_ TimeMS : 128|32@1+ (1,0) [0|0] "" Vector__XXX
 
 
 
@@ -638,6 +647,7 @@ BA_ "VFrameFormat" BO_ 8 14;
 BA_ "VFrameFormat" BO_ 30 14;
 BA_ "VFrameFormat" BO_ 81 14;
 BA_ "VFrameFormat" BO_ 82 14;
+BA_ "VFrameFormat" BO_ 1000 14;
 SIG_VALTYPE_ 80 Latitude : 2;
 SIG_VALTYPE_ 80 Longitude : 2;
 SIG_VALTYPE_ 80 Altitude : 2;
@@ -997,4 +1007,8 @@ SIG_VALTYPE_ 82 roll : 2;
 SIG_VALTYPE_ 82 pitch : 2;
 SIG_VALTYPE_ 82 azimuth : 2;
 SIG_VALTYPE_ 4 PackCurrent : 1;
+SIG_VALTYPE_ 1681 MotorTemp : 1;
+SIG_VALTYPE_ 1681 ControllerTemp : 1;
+SIG_VALTYPE_ 1000 StartPointLat : 2;
+SIG_VALTYPE_ 1000 StartPointLong : 2;
 
