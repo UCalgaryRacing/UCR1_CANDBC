@@ -36,6 +36,10 @@ BS_:
 BU_: FrontBoard BackBoard Kvaser SteeringWheel TCU GPS ACULV Bamocar PDM
 
 
+BO_ 3221225472 VECTOR__INDEPENDENT_SIG_MSG: 0 Vector__XXX
+ SG_ StartPointLat : 0|64@1- (1,0) [0|0] "" Vector__XXX
+ SG_ StartPointLong : 64|64@1- (1,0) [0|0] "" Vector__XXX
+
 BO_ 259 FrontAnalog: 16 FrontBoard
  SG_ LeftRad : 0|16@1+ (1,0) [0|0] ""  FrontBoard,Kvaser,SteeringWheel
  SG_ RightRad : 16|16@1+ (1,0) [0|0] ""  FrontBoard,Kvaser,SteeringWheel
@@ -120,10 +124,10 @@ BO_ 80 GPSBestPos: 64 GPS
  SG_ gpsStatus : 384|8@1+ (1,0) [0|0] "" Vector__XXX
 
 BO_ 101 FrontFrequency: 16 FrontBoard
- SG_ RearRight : 0|32@1- (0.048768,0) [0|0] ""  Kvaser,SteeringWheel
- SG_ FrontRight : 32|32@1- (0.048768,0) [0|0] ""  Kvaser,SteeringWheel
- SG_ RearLeft : 64|32@1- (0.048768,0) [0|0] ""  Kvaser,SteeringWheel
- SG_ FrontLeft : 96|32@1- (0.048768,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ RearRight : 0|32@1- (0.045899294118,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ FrontRight : 32|32@1- (0.045899294118,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ RearLeft : 64|32@1- (0.045899294118,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ FrontLeft : 96|32@1- (0.045899294118,0) [0|0] ""  Kvaser,SteeringWheel
 
 BO_ 102 RearFrequency: 16 BackBoard
  SG_ Freq1 : 0|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
@@ -543,7 +547,7 @@ BO_ 1280 PDM1: 8 PDM
  SG_ InternalRailVoltage : 40|8@1- (0.0615,0) [0|15.68] "" Vector__XXX
  SG_ ResetSource : 48|8@1+ (1,0) [0|0] "" Vector__XXX
 
-BO_ 385 BamocarTxData: 4 Bamocar
+BO_ 385 BamocarTxData: 6 Bamocar
  SG_ REGID : 0|8@1+ (1,0) [0|0] "" Vector__XXX
  SG_ Data : 8|16@1+ (1,0) [0|0] "" Vector__XXX
 
@@ -592,10 +596,9 @@ BO_ 1681 BamoCarConverted: 8 SteeringWheel
  SG_ MotorTemp : 0|32@1- (1,0) [0|0] "" Vector__XXX
  SG_ ControllerTemp : 32|32@1- (1,0) [0|0] "" Vector__XXX
 
-BO_ 1000 LapInfo: 64 SteeringWheel
- SG_ StartPointLat : 0|64@1- (1,0) [0|0] "" Vector__XXX
- SG_ StartPointLong : 64|64@1- (1,0) [0|0] "" Vector__XXX
- SG_ TimeMS : 128|32@1+ (1,0) [0|0] "" Vector__XXX
+BO_ 1000 LapInfo: 5 SteeringWheel
+ SG_ TimeMS : 0|32@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ LapNum : 32|8@1+ (1,0) [0|0] "" Vector__XXX
 
 
 
@@ -1009,6 +1012,4 @@ SIG_VALTYPE_ 82 azimuth : 2;
 SIG_VALTYPE_ 4 PackCurrent : 1;
 SIG_VALTYPE_ 1681 MotorTemp : 1;
 SIG_VALTYPE_ 1681 ControllerTemp : 1;
-SIG_VALTYPE_ 1000 StartPointLat : 2;
-SIG_VALTYPE_ 1000 StartPointLong : 2;
 
