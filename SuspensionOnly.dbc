@@ -1,0 +1,529 @@
+VERSION ""
+
+
+NS_ : 
+	NS_DESC_
+	CM_
+	BA_DEF_
+	BA_
+	VAL_
+	CAT_DEF_
+	CAT_
+	FILTER
+	BA_DEF_DEF_
+	EV_DATA_
+	ENVVAR_DATA_
+	SGTYPE_
+	SGTYPE_VAL_
+	BA_DEF_SGTYPE_
+	BA_SGTYPE_
+	SIG_TYPE_REF_
+	VAL_TABLE_
+	SIG_GROUP_
+	SIG_VALTYPE_
+	SIGTYPE_VALTYPE_
+	BO_TX_BU_
+	BA_DEF_REL_
+	BA_REL_
+	BA_DEF_DEF_REL_
+	BU_SG_REL_
+	BU_EV_REL_
+	BU_BO_REL_
+	SG_MUL_VAL_
+
+BS_:
+
+BU_: FrontBoard BackBoard Kvaser SteeringWheel TCU GPS ACULV Bamocar PDM
+
+
+BO_ 3221225472 VECTOR__INDEPENDENT_SIG_MSG: 0 Vector__XXX
+ SG_ StartPointLat : 0|64@1- (1,0) [0|0] "" Vector__XXX
+ SG_ StartPointLong : 64|64@1- (1,0) [0|0] "" Vector__XXX
+ SG_ Analog1 : 0|16@1+ (1,0) [0|0] ""  BackBoard,Kvaser,SteeringWheel
+ SG_ Analog2 : 16|16@1+ (1,0) [0|0] ""  BackBoard,Kvaser,SteeringWheel
+ SG_ Analog3 : 32|16@1+ (1,0) [0|0] ""  BackBoard,Kvaser,SteeringWheel
+ SG_ Analog4 : 48|16@1+ (1,0) [0|0] ""  BackBoard,Kvaser,SteeringWheel
+ SG_ Analog5 : 64|16@1+ (1,0) [0|0] ""  BackBoard,Kvaser,SteeringWheel
+ SG_ Analog6 : 80|16@1+ (1,0) [0|0] ""  BackBoard,Kvaser,SteeringWheel
+ SG_ Analog7 : 96|16@1+ (1,0) [0|0] ""  BackBoard,Kvaser,SteeringWheel
+ SG_ Analog8 : 112|16@1+ (1,0) [0|0] ""  BackBoard,Kvaser,SteeringWheel
+ SG_ Pressure1 : 0|24@1- (1,0) [0|0] ""  BackBoard,SteeringWheel,Kvaser
+ SG_ Pressure2 : 24|24@1- (1,0) [0|0] ""  BackBoard,SteeringWheel,Kvaser
+ SG_ Pressure3 : 48|24@1- (1,0) [0|0] ""  BackBoard,SteeringWheel,Kvaser
+ SG_ Temperature1 : 72|16@1- (1,0) [0|0] ""  BackBoard,SteeringWheel,Kvaser
+ SG_ Temperature2 : 88|16@1- (1,0) [0|0] ""  BackBoard,SteeringWheel,Kvaser
+ SG_ Temperature3 : 104|16@1- (1,0) [0|0] ""  BackBoard,SteeringWheel,Kvaser
+ SG_ Pressure1 : 0|24@1- (1,0) [0|0] ""  FrontBoard,Kvaser,SteeringWheel
+ SG_ Pressure2 : 24|24@1- (1,0) [0|0] ""  FrontBoard,Kvaser,SteeringWheel
+ SG_ Pressure3 : 48|24@1- (1,0) [0|0] ""  FrontBoard,Kvaser,SteeringWheel
+ SG_ Temperature1 : 72|16@1- (1,0) [0|0] ""  FrontBoard,Kvaser,SteeringWheel
+ SG_ Temperature2 : 88|16@1- (1,0) [0|0] ""  FrontBoard,Kvaser,SteeringWheel
+ SG_ Temperature3 : 104|16@1- (1,0) [0|0] ""  FrontBoard,Kvaser,SteeringWheel
+ SG_ Encoder1 : 0|8@1+ (1,0) [0|0] ""  Kvaser
+ SG_ Encoder2 : 8|8@1+ (1,0) [0|0] ""  Kvaser
+ SG_ Encoder3 : 16|8@1+ (1,0) [0|0] ""  Kvaser
+ SG_ Encoder4 : 24|8@1+ (1,0) [0|0] ""  Kvaser
+ SG_ REGID : 0|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Data : 8|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ CompoundID : 0|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ PDMIntTemperature : 8|8@1+ (1,0) [0|125] "" Vector__XXX
+ SG_ PDMBattVoltage : 16|8@1- (0.1216,0) [0|31] "" Vector__XXX
+ SG_ GlobalErrorFlag : 24|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ TotalCurrent : 32|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ InternalRailVoltage : 40|8@1- (0.0615,0) [0|15.68] "" Vector__XXX
+ SG_ ResetSource : 48|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ ChargeRequest : 0|8@1+ (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ ChargeStatus1 : 0|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ ChargeStatus2 : 32|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ FanSetPoint : 0|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ RPM : 32|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ AMSStatus : 0|8@1+ (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ FLD : 8|8@1+ (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ StateOfCharge : 16|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ AccumulatorVoltage : 48|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ TractiveVoltage : 80|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ CellCurrent : 112|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ IsolationMonitoring : 144|8@1+ (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ IsolationMonitoring1 : 152|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ BrakeLight : 0|1@1+ (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ BamocarRFE : 1|1@1+ (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ BamocarFRG : 2|1@1+ (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ APPS1 : 0|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ APPS2 : 32|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ BSE : 64|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Status : 96|8@1+ (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ PackVoltage : 0|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Therm1 : 0|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Therm2 : 32|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Therm3 : 64|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Therm4 : 96|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Therm5 : 128|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Therm6 : 160|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Therm7 : 192|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Therm8 : 224|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Therm9 : 256|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Therm10 : 288|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Therm11 : 320|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Therm12 : 352|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Therm13 : 384|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Therm14 : 416|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Therm15 : 448|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Therm16 : 480|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Therm1 : 0|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Therm2 : 32|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Therm3 : 64|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Therm4 : 96|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Therm5 : 128|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Therm6 : 160|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Therm7 : 192|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Therm8 : 224|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Therm9 : 256|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Therm10 : 288|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Therm11 : 320|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Therm12 : 352|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Therm13 : 384|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Therm14 : 416|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Therm15 : 448|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Therm16 : 480|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Therm1 : 0|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Therm2 : 32|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Therm3 : 64|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Therm4 : 96|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Therm5 : 128|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Therm6 : 160|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Therm7 : 192|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Therm8 : 224|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Therm9 : 256|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Therm10 : 288|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Therm11 : 320|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Therm12 : 352|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Therm13 : 384|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Therm14 : 416|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Therm15 : 448|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Therm16 : 480|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Therm1 : 0|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Therm2 : 32|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Therm3 : 64|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Therm4 : 96|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Therm5 : 128|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Therm6 : 160|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Therm7 : 192|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Therm8 : 224|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Therm9 : 256|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Therm10 : 288|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Therm11 : 320|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Therm12 : 352|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Therm13 : 384|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Therm14 : 416|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Therm15 : 448|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Therm16 : 480|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Therm1 : 0|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Therm2 : 32|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Therm3 : 64|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Therm4 : 96|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Therm5 : 128|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Therm6 : 160|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Therm7 : 192|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Therm8 : 224|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Therm9 : 256|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Therm10 : 288|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Therm11 : 320|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Therm12 : 352|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Therm13 : 384|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Therm14 : 416|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Therm15 : 448|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Therm16 : 480|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Therm1 : 0|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Therm2 : 32|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Therm3 : 64|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Therm4 : 96|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Therm5 : 128|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Therm6 : 160|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Therm7 : 192|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Therm8 : 224|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Therm9 : 256|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Therm10 : 288|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Therm11 : 320|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Therm12 : 352|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Therm13 : 384|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Therm14 : 416|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Therm15 : 448|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Therm16 : 480|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Therm1 : 0|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Therm2 : 32|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Therm3 : 64|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Therm4 : 96|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Therm5 : 128|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Therm6 : 160|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Therm7 : 192|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Therm8 : 224|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Therm9 : 256|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Therm10 : 288|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Therm11 : 320|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Therm12 : 352|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Therm13 : 384|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Therm14 : 416|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Therm15 : 448|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Therm16 : 480|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Therm1 : 0|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Therm2 : 32|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Therm3 : 64|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Therm4 : 96|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Therm5 : 128|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Therm6 : 160|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Therm7 : 192|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Therm8 : 224|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Therm9 : 256|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Therm10 : 288|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Therm11 : 320|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Therm12 : 352|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Therm13 : 384|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Therm14 : 416|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Therm15 : 448|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Therm16 : 480|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Therm1 : 0|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Therm2 : 32|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Therm3 : 64|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Therm4 : 96|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Therm5 : 128|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Therm6 : 160|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Therm7 : 192|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Therm8 : 224|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Therm9 : 256|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Therm10 : 288|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Therm11 : 320|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Therm12 : 352|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Therm13 : 384|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Therm14 : 416|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Therm15 : 448|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Therm16 : 480|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Therm1 : 0|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Therm2 : 32|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Therm3 : 64|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Therm4 : 96|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Therm5 : 128|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Therm6 : 160|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Therm7 : 192|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Therm8 : 224|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Therm9 : 256|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Therm10 : 288|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Therm11 : 320|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Therm12 : 352|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Therm13 : 384|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Therm14 : 416|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Therm15 : 448|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Therm16 : 480|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Therm1 : 0|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Therm2 : 32|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Therm3 : 64|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Therm4 : 96|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Therm5 : 128|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Therm6 : 160|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Therm7 : 192|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Therm8 : 224|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Therm9 : 256|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Therm10 : 288|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Therm11 : 320|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Therm12 : 352|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Therm13 : 384|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Therm14 : 416|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Therm15 : 448|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Therm16 : 480|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Therm1 : 0|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Therm2 : 32|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Therm3 : 64|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Therm4 : 96|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Therm5 : 128|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Therm6 : 160|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Therm7 : 192|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Therm8 : 224|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Therm9 : 256|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Therm10 : 288|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Therm11 : 320|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Therm12 : 352|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Therm13 : 384|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Therm14 : 416|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Therm15 : 448|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Therm16 : 480|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Cell114 : 0|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Cell115 : 32|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Cell116 : 64|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Cell117 : 96|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Cell118 : 128|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Cell119 : 160|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Cell120 : 192|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Cell121 : 224|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Cell122 : 256|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Cell123 : 288|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Cell124 : 320|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Cell125 : 352|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Cell126 : 384|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Cell127 : 416|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Cell128 : 448|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Cell129 : 480|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Cell97 : 0|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Cell98 : 32|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Cell99 : 64|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Cell101 : 96|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Cell102 : 128|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Cell103 : 160|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Cell104 : 192|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Cell105 : 224|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Cell106 : 256|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Cell107 : 288|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Cell108 : 320|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Cell109 : 352|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Cell110 : 384|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Cell111 : 416|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Cell112 : 448|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Cell113 : 480|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Cell81 : 0|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Cell82 : 32|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Cell83 : 64|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Cell84 : 96|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Cell85 : 128|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Cell86 : 160|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Cell87 : 192|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Cell88 : 224|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Cell89 : 256|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Cell90 : 288|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Cell91 : 320|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Cell92 : 352|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Cell93 : 384|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Cell94 : 416|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Cell95 : 448|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Cell96 : 480|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Cell65 : 0|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Cell66 : 32|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Cell67 : 64|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Cell68 : 96|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Cell69 : 128|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Cell70 : 160|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Cell71 : 192|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Cell72 : 224|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Cell73 : 256|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Cell74 : 288|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Cell75 : 320|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Cell76 : 352|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Cell77 : 384|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Cell78 : 416|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Cell79 : 448|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Cell80 : 480|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Cell49 : 0|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Cell50 : 32|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Cell51 : 64|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Cell52 : 96|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Cell53 : 128|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Cell54 : 160|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Cell55 : 192|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Cell56 : 224|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Cell57 : 256|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Cell58 : 288|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Cell59 : 320|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Cell60 : 352|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Cell61 : 384|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Cell62 : 416|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Cell63 : 448|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Cell64 : 480|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Cell33 : 0|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Cell34 : 32|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Cell35 : 64|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Cell36 : 96|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Cell37 : 128|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Cell38 : 160|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Cell39 : 192|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Cell40 : 224|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Cell41 : 256|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Cell42 : 288|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Cell43 : 320|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Cell44 : 352|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Cell45 : 384|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Cell46 : 416|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Cell47 : 448|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Cell48 : 480|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Cell17 : 0|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Cell18 : 32|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Cell19 : 64|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Cell20 : 96|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Cell21 : 128|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Cell22 : 160|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Cell23 : 192|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Cell24 : 224|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Cell25 : 256|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Cell26 : 288|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Cell27 : 320|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Cell28 : 352|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Cell29 : 384|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Cell30 : 416|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Cell31 : 448|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Cell32 : 480|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Cell1 : 0|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Cell2 : 32|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Cell3 : 64|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Cell4 : 96|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Cell5 : 128|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Cell6 : 160|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Cell7 : 192|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Cell8 : 224|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Cell9 : 256|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Cell10 : 288|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Cell11 : 320|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Cell12 : 352|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Cell13 : 384|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Cell14 : 416|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Cell15 : 448|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Cell16 : 480|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ REGID : 0|8@1+ (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Byte1 : 8|8@1+ (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Byte2 : 16|8@1+ (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Byte3 : 24|8@1+ (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Byte4 : 32|8@1+ (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Byte5 : 40|8@1+ (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Freq1 : 0|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Freq2 : 32|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Freq3 : 64|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Freq4 : 96|32@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ RearRight : 0|32@1- (0.045899294118,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ FrontRight : 32|32@1- (0.045899294118,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ RearLeft : 64|32@1- (0.045899294118,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ FrontLeft : 96|32@1- (0.045899294118,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Latitude : 0|64@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Longitude : 64|64@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ Altitude : 128|64@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ stdLatitude : 192|64@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ stdLongitude : 256|64@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ stdAltitude : 320|64@1- (1,0) [0|0] ""  Kvaser,SteeringWheel
+ SG_ gpsStatus : 384|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ TimeMS : 0|32@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ LapNum : 32|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ MotorTemp : 0|32@1- (1,0) [0|0] "" Vector__XXX
+ SG_ ControllerTemp : 32|32@1- (1,0) [0|0] "" Vector__XXX
+ SG_ PackCurrent : 0|32@1- (1,0) [0|0] "" Vector__XXX
+ SG_ PDMIntTemperature : 0|8@1+ (1,0) [0|125] "" Vector__XXX
+ SG_ PDMBattVoltage : 8|8@1- (0.1216,0) [0|31] "" Vector__XXX
+ SG_ GlobalErrorFlag : 16|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ TotalCurrent : 24|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ InternalRailVoltage : 32|8@1+ (0.0615,0) [0|15.68] "" Vector__XXX
+ SG_ ResetSource : 40|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ AccumulatorCurrent : 0|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ TCUCurrent : 8|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ BamocarCurrent : 16|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ PumpsCurrent : 24|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ TSALCurrent : 32|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ DAQCurrent : 40|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ DisplayKvaserCurrent : 48|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ ShutdownResetCurrent : 56|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ MotorTempRaw : 0|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ ControllerTempRaw : 16|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ north_vel : 0|64@1- (1,0) [0|0] "" Vector__XXX
+ SG_ east_vel : 64|64@1- (1,0) [0|0] "" Vector__XXX
+ SG_ up_vel : 128|64@1- (1,0) [0|0] "" Vector__XXX
+ SG_ roll : 192|64@1- (1,0) [0|0] "" Vector__XXX
+ SG_ pitch : 256|64@1- (1,0) [0|0] "" Vector__XXX
+ SG_ azimuth : 320|64@1- (1,0) [0|0] "" Vector__XXX
+ SG_ status : 384|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ gnss_week : 0|32@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ gnss_seconds : 32|64@1- (1,0) [0|0] "" Vector__XXX
+ SG_ gnss_lat : 96|64@1- (1,0) [0|0] "" Vector__XXX
+ SG_ gnss_long : 160|64@1- (1,0) [0|0] "" Vector__XXX
+ SG_ gnss_height : 224|64@1- (1,0) [0|0] "" Vector__XXX
+
+BO_ 259 FrontAnalog: 16 FrontBoard
+ SG_ LeftRad : 0|16@1+ (1,0) [0|0] ""  FrontBoard,Kvaser,SteeringWheel
+ SG_ RightRad : 16|16@1+ (1,0) [0|0] ""  FrontBoard,Kvaser,SteeringWheel
+ SG_ FrontRightPot : 32|16@1+ (0.018315018315,0) [0|0] ""  FrontBoard,Kvaser,SteeringWheel
+ SG_ FrontLeftPot : 48|16@1+ (0.018315018315,0) [0|0] ""  FrontBoard,Kvaser,SteeringWheel
+ SG_ RearRightPot : 64|16@1+ (0.018315018315,0) [0|0] ""  FrontBoard,Kvaser,SteeringWheel
+ SG_ RearLeftPot : 80|16@1+ (0.018315018315,0) [0|0] ""  FrontBoard,Kvaser,SteeringWheel
+ SG_ SteeringAngle : 96|16@1+ (0.018315018315,0) [0|0] ""  FrontBoard,Kvaser,SteeringWheel
+ SG_ Analog8 : 112|16@1+ (1,0) [0|0] ""  FrontBoard,Kvaser,SteeringWheel
+
+BO_ 1552 FrontStrainGauges1: 20 FrontBoard
+ SG_ FLPR : 0|24@1+ (1,0) [0|0] ""  Kvaser
+ SG_ FLRU : 24|24@1+ (1,0) [0|0] ""  Kvaser
+ SG_ FLFL : 48|24@1+ (1,0) [0|0] ""  Kvaser
+ SG_ FLRL : 72|24@1+ (1,0) [0|0] ""  Kvaser
+ SG_ FLFU : 96|24@1+ (1,0) [0|0] ""  Kvaser
+ SG_ FLS : 120|24@1+ (1,0) [0|0] ""  Kvaser
+
+BO_ 1553 FrontStrainGauges2: 20 FrontBoard
+ SG_ FRS : 0|24@1+ (1,0) [0|0] ""  Kvaser
+ SG_ FRFU : 24|24@1+ (1,0) [0|0] ""  Kvaser
+ SG_ FRFL : 48|24@1+ (1,0) [0|0] ""  Kvaser
+ SG_ FRRL : 72|24@1+ (1,0) [0|0] ""  Kvaser
+ SG_ FRRU : 96|24@1+ (1,0) [0|0] ""  Kvaser
+ SG_ FRPR : 120|24@1+ (1,0) [0|0] ""  Kvaser
+
+BO_ 1554 RearStrainGauges1: 20 BackBoard
+ SG_ RRT : 0|24@1+ (1,0) [0|0] ""  Kvaser
+ SG_ RRRL : 24|24@1+ (1,0) [0|0] ""  Kvaser
+ SG_ RRRU : 48|24@1+ (1,0) [0|0] ""  Kvaser
+ SG_ RRFL : 72|24@1+ (1,0) [0|0] ""  Kvaser
+ SG_ RRFU : 96|24@1+ (1,0) [0|0] ""  Kvaser
+ SG_ RRPR : 120|24@1+ (1,0) [0|0] ""  Kvaser
+
+BO_ 1555 RearStrainGauges2: 20 BackBoard
+ SG_ RLFL : 0|24@1+ (1,0) [0|0] ""  Kvaser
+ SG_ RLFU : 24|24@1+ (1,0) [0|0] ""  Kvaser
+ SG_ RLPR : 48|24@1+ (1,0) [0|0] ""  Kvaser
+ SG_ RLRU : 72|24@1+ (1,0) [0|0] ""  Kvaser
+ SG_ RLRL : 96|24@1+ (1,0) [0|0] ""  Kvaser
+ SG_ RLT : 120|24@1+ (1,0) [0|0] ""  Kvaser
+
+
+
+CM_ BU_ FrontBoard "";
+CM_ SG_ 3221225472 Status "RTD Button, Light, Status";
+BA_DEF_  "BusType" STRING ;
+BA_DEF_ BO_  "CANFD_BRS" ENUM  "0","1";
+BA_DEF_ BO_  "VFrameFormat" ENUM  "StandardCAN","ExtendedCAN","reserved","reserved","reserved","reserved","reserved","reserved","reserved","reserved","reserved","reserved","reserved","reserved","StandardCAN_FD","ExtendedCAN_FD";
+BA_DEF_DEF_  "BusType" "";
+BA_DEF_DEF_  "CANFD_BRS" "0";
+BA_DEF_DEF_  "VFrameFormat" "StandardCAN";
+BA_ "BusType" "CAN FD";
+BA_ "VFrameFormat" BO_ 259 14;
+BA_ "VFrameFormat" BO_ 1552 14;
+BA_ "VFrameFormat" BO_ 1553 14;
+BA_ "VFrameFormat" BO_ 1554 14;
+BA_ "VFrameFormat" BO_ 1555 14;
+
