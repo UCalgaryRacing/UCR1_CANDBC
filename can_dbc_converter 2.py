@@ -1,9 +1,12 @@
+import multiprocessing.process
 import cantools
 import csv
 import os
 import shutil
-
-col = -1
+import multiprocessing
+import threading
+import time
+col = -2
 cells = False
 
 
@@ -44,7 +47,7 @@ else:
     # dir_name = input("Enter Directory Name you would like to store logs at: ")
     # dbc_path = "C:/Users/Steven/Documents/GitRepo/UCR1_CANDBC/UCR-01.dbc"
     # csv_folder = "C:/Users/Steven/OneDrive/Documents/UCalgary Racing/Testing new/2024-10-17"
-    csv_folder = "C:/Users/steve/Downloads/DownloadedFiles/Raw Data"
+    csv_folder = r"C:\Users\steve\Downloads\logs"
     # dir_name = "C:/Users/Steven/Documents/GitRepo/DecodedLogs/2024-10-17"
     dir_name = "C:/Users/steve/Downloads/DecodedLogs"
     # dbc_path = "C:/Users/Steven/Documents/GitRepo/UCR1_CANDBC/UCR-01.dbc"
@@ -55,9 +58,11 @@ cell_ids = range(50, 58)
 db = cantools.database.load_file(dbc_path)
 output_csv_path = ""
 
-for filename in os.listdir(csv_folder):
-    if filename.endswith(".csv"):
-        csv_path = os.path.join(csv_folder, filename)
+
+
+def parse_file(file_name):
+    if file_name.endswith(".csv"):
+        csv_path = os.path.join(csv_folder, file_name)
         print(f"Processing file: {csv_path}")
 
         # if not os.path.exists(f"./Decoded_Logs/{dir_name}"):
@@ -66,7 +71,7 @@ for filename in os.listdir(csv_folder):
         #     f"./Decoded_Logs/{dir_name}", f"decoded_{filename}"
         # )
         output_csv_path = os.path.join(
-            f"{dir_name}", f"decoded_{filename}"
+            f"{dir_name}", f"decoded_{file_name}"
         )
         print(output_csv_path)
 
@@ -165,3 +170,30 @@ for filename in os.listdir(csv_folder):
         print(f"Decoded data has been exported to {output_csv_path}")
     else:
         shutil.rmtree(f"./Decoded_Logs/{dir_name}")
+
+
+threads = []
+
+if __name__ == '__main__':
+    processes = multiprocessing.Pool(processes= 10)
+    start = time.time()
+    files = os.listdir(csv_folder)
+    processes.map(parse_file, files)
+
+    # for filename in os.listdir(csv_folder):
+    #     # process = multiprocessing.Process(target=parse_file, args=(filename, csv_folder,))
+    #     # processes.append(process)
+    #     # process.start()
+    #     processes.apply_async(parse_file, args=(filename, csv_folder))
+        
+    # # # for thread in processes:
+    # # #     thread.join()
+    # processes.close()
+    # processes.join()
+    end = time.time()
+
+    print("It took", end - start, "seconds")
+    # print(multiprocessing.cpu_count())
+        
+        
+
