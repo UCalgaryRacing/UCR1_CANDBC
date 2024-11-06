@@ -99,7 +99,7 @@ BO_ 1553 FrontStrainGauges2: 20 FrontBoard
  SG_ FRPR : 120|24@1+ (1,0) [0|0] ""  Kvaser
 
 BO_ 1554 RearStrainGauges1: 20 BackBoard
- SG_ RRT : 0|24@1+ (1,0) [0|0] ""  Kvaser
+ SG_ RRT : 0|24@1- (1,0) [0|0] ""  Kvaser
  SG_ RRRL : 24|24@1+ (1,0) [0|0] ""  Kvaser
  SG_ RRRU : 48|24@1+ (1,0) [0|0] ""  Kvaser
  SG_ RRFL : 72|24@1+ (1,0) [0|0] ""  Kvaser
@@ -549,7 +549,7 @@ BO_ 1280 PDM1: 8 PDM
 
 BO_ 385 BamocarTxData: 6 Bamocar
  SG_ REGID : 0|8@1+ (1,0) [0|0] "" Vector__XXX
- SG_ Data : 8|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Data : 8|40@1+ (1,0) [0|0] "" Vector__XXX
 
 BO_ 81 INS_GPS: 48 GPS
  SG_ gnss_week : 0|32@1+ (1,0) [0|0] "" Vector__XXX
