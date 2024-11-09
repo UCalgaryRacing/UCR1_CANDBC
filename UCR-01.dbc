@@ -589,8 +589,10 @@ BO_ 1680 PDMReTransmit: 6 SteeringWheel
  SG_ InternalRailVoltage : 32|8@1+ (0.0615,0) [0|15.68] "" Vector__XXX
  SG_ ResetSource : 40|8@1+ (1,0) [0|0] "" Vector__XXX
 
-BO_ 4 PackCurrent: 4 ACULV
+BO_ 4 PackPower: 12 ACULV
  SG_ PackCurrent : 0|32@1- (1,0) [0|0] "" Vector__XXX
+ SG_ PackVoltage : 32|32@1- (1,0) [0|0] "" Vector__XXX
+ SG_ PackPower : 64|32@1- (1,0) [0|0] "" Vector__XXX
 
 BO_ 1681 BamoCarConverted: 8 SteeringWheel
  SG_ MotorTemp : 0|32@1- (1,0) [0|0] "" Vector__XXX
@@ -599,6 +601,16 @@ BO_ 1681 BamoCarConverted: 8 SteeringWheel
 BO_ 1000 LapInfo: 5 SteeringWheel
  SG_ TimeMS : 0|32@1+ (1,0) [0|0] "" Vector__XXX
  SG_ LapNum : 32|8@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 10 Power_Limit_Info1: 8 Vector__XXX
+ SG_ MotorRPM : 0|16@1- (1,0) [0|0] "" Vector__XXX
+ SG_ OutputCurrent : 16|16@1- (1,0) [0|0] "" Vector__XXX
+ SG_ OutputCurrentLimit : 32|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Vout : 48|16@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 11 Power_Limit_Info2: 8 Vector__XXX
+ SG_ PackCurrent : 0|32@1- (1,0) [0|0] "" Vector__XXX
+ SG_ PackPower : 32|32@1- (1,0) [0|0] "" Vector__XXX
 
 
 
@@ -650,6 +662,7 @@ BA_ "VFrameFormat" BO_ 8 14;
 BA_ "VFrameFormat" BO_ 30 14;
 BA_ "VFrameFormat" BO_ 81 14;
 BA_ "VFrameFormat" BO_ 82 14;
+BA_ "VFrameFormat" BO_ 4 14;
 BA_ "VFrameFormat" BO_ 1000 14;
 SIG_VALTYPE_ 80 Latitude : 2;
 SIG_VALTYPE_ 80 Longitude : 2;
@@ -1010,6 +1023,10 @@ SIG_VALTYPE_ 82 roll : 2;
 SIG_VALTYPE_ 82 pitch : 2;
 SIG_VALTYPE_ 82 azimuth : 2;
 SIG_VALTYPE_ 4 PackCurrent : 1;
+SIG_VALTYPE_ 4 PackVoltage : 1;
+SIG_VALTYPE_ 4 PackPower : 1;
 SIG_VALTYPE_ 1681 MotorTemp : 1;
 SIG_VALTYPE_ 1681 ControllerTemp : 1;
+SIG_VALTYPE_ 11 PackCurrent : 1;
+SIG_VALTYPE_ 11 PackPower : 1;
 
