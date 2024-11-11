@@ -39,6 +39,8 @@ BU_: FrontBoard BackBoard Kvaser SteeringWheel TCU GPS ACULV Bamocar PDM
 BO_ 3221225472 VECTOR__INDEPENDENT_SIG_MSG: 0 Vector__XXX
  SG_ StartPointLat : 0|64@1- (1,0) [0|0] "" Vector__XXX
  SG_ StartPointLong : 64|64@1- (1,0) [0|0] "" Vector__XXX
+ SG_ NewSignal_0002 : 48|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ APPS1 : 32|16@1+ (1,0) [0|0] "" Vector__XXX
 
 BO_ 259 FrontAnalog: 16 FrontBoard
  SG_ LeftRad : 0|16@1+ (1,0) [0|0] ""  FrontBoard,Kvaser,SteeringWheel
@@ -606,7 +608,7 @@ BO_ 10 Power_Limit_Info1: 8 Vector__XXX
  SG_ MotorRPM : 0|16@1- (1,0) [0|0] "" Vector__XXX
  SG_ OutputCurrent : 16|16@1- (1,0) [0|0] "" Vector__XXX
  SG_ OutputCurrentLimit : 32|16@1+ (1,0) [0|0] "" Vector__XXX
- SG_ Vout : 48|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ APPS1 : 48|16@1+ (1,0) [0|0] "" Vector__XXX
 
 BO_ 11 Power_Limit_Info2: 8 Vector__XXX
  SG_ PackCurrent : 0|32@1- (1,0) [0|0] "" Vector__XXX
