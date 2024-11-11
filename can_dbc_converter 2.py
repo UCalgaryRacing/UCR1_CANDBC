@@ -6,7 +6,7 @@ import shutil
 import multiprocessing
 import time
 import itertools
-col = -1
+col = -2
 
 
 class CanFrame:

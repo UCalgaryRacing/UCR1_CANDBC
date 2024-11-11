@@ -569,6 +569,28 @@ BO_ 82 INS_IMU: 64 GPS
  SG_ azimuth : 320|64@1- (1,0) [0|0] "" Vector__XXX
  SG_ status : 384|8@1+ (1,0) [0|0] "" Vector__XXX
 
+BO_ 83 GNSS_BESTPOS: 48 GPS
+ SG_ sol_stat : 0|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ pos_type : 8|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ lat : 16|64@1- (1,0) [0|0] "" Vector__XXX
+ SG_ lng : 80|64@1- (1,0) [0|0] "" Vector__XXX
+ SG_ hgt : 144|64@1- (1,0) [0|0] "" Vector__XXX
+ SG_ lat_std_dev : 208|32@1- (1,0) [0|0] "" Vector__XXX
+ SG_ long_std_dev : 240|32@1- (1,0) [0|0] "" Vector__XXX
+ SG_ height_std_dev : 272|32@1- (1,0) [0|0] "" Vector__XXX
+ SG_ gnss_week : 304|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ gnss_ms : 320|32@1- (1,0) [0|0] "" Vector__XXX
+
+BO_ 84 RAWIMU: 48 GPS
+ SG_ gnss_week : 0|32@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ gnss_seconds : 32|64@1- (1,0) [0|0] "" Vector__XXX
+ SG_ z_accel : 96|32@1- (1,0) [0|0] "" Vector__XXX
+ SG_ neg_y_accel : 128|32@1- (1,0) [0|0] "" Vector__XXX
+ SG_ x_accel : 160|32@1- (1,0) [0|0] "" Vector__XXX
+ SG_ z_gyro : 192|32@1- (1,0) [0|0] "" Vector__XXX
+ SG_ neg_y_gyro : 224|32@1- (1,0) [0|0] "" Vector__XXX
+ SG_ x_gyro : 256|32@1- (1,0) [0|0] "" Vector__XXX
+
 BO_ 600 BamoCarReTransmit: 4 SteeringWheel
  SG_ MotorTempRaw : 0|16@1+ (1,0) [0|0] "" Vector__XXX
  SG_ ControllerTempRaw : 16|16@1+ (1,0) [0|0] "" Vector__XXX
@@ -664,6 +686,8 @@ BA_ "VFrameFormat" BO_ 8 14;
 BA_ "VFrameFormat" BO_ 30 14;
 BA_ "VFrameFormat" BO_ 81 14;
 BA_ "VFrameFormat" BO_ 82 14;
+BA_ "VFrameFormat" BO_ 83 14;
+BA_ "VFrameFormat" BO_ 84 14;
 BA_ "VFrameFormat" BO_ 4 14;
 BA_ "VFrameFormat" BO_ 1000 14;
 SIG_VALTYPE_ 80 Latitude : 2;
@@ -1024,6 +1048,13 @@ SIG_VALTYPE_ 82 up_vel : 2;
 SIG_VALTYPE_ 82 roll : 2;
 SIG_VALTYPE_ 82 pitch : 2;
 SIG_VALTYPE_ 82 azimuth : 2;
+SIG_VALTYPE_ 83 lat : 2;
+SIG_VALTYPE_ 83 lng : 2;
+SIG_VALTYPE_ 83 hgt : 2;
+SIG_VALTYPE_ 83 lat_std_dev : 1;
+SIG_VALTYPE_ 83 long_std_dev : 1;
+SIG_VALTYPE_ 83 height_std_dev : 1;
+SIG_VALTYPE_ 84 gnss_seconds : 2;
 SIG_VALTYPE_ 4 PackCurrent : 1;
 SIG_VALTYPE_ 4 PackVoltage : 1;
 SIG_VALTYPE_ 4 PackPower : 1;
