@@ -1,15 +1,20 @@
-import multiprocessing.process
-import cantools
 import csv
 import os
-import shutil
+# import cudf.pandas
+# cudf.pandas.install()
+# %load_ext cudf.pandas
+import pandas as pd
 import multiprocessing
+import platform
 import time
-import itertools
+import cantools
+import cudf
 col = -2
 
 
-class CanFrame:
+class CanFrame (object):
+    """Class representing a CAN frame"""
+
     def __init__(self, timestamp, channel, can_id, flags, dlc, data) -> None:
         self.timestamp = timestamp
         self.channel = channel
@@ -30,6 +35,7 @@ class CanFrame:
 
 
 def sort_key(header):
+    """Function for sorting the headers"""
     if header.startswith("Cell") and header[4:].isdigit():
         return (0, int(header[4:]))  # Sort numerically for Cell#
     else:
@@ -44,11 +50,14 @@ def parse_file(file_name, input_folder, output_path, database):
         csv_path = os.path.join(input_folder, file_name)
         print(f"Processing file: {csv_path}")
 
-        if not os.path.exists(output_path):
-            os.makedirs(output_path)
+        plain_data_path = os.path.join(
+            f"{output_path}", f"Regular Data"
+        )
+        if not os.path.exists(plain_data_path):
+            os.makedirs(plain_data_path, exist_ok=True)
 
         output_csv_path = os.path.join(
-            f"{output_path}", f"decoded_{file_name}"
+            f"{plain_data_path}", f"regular_{file_name}"
         )
         print(output_csv_path)
 
@@ -130,26 +139,85 @@ def parse_file(file_name, input_folder, output_path, database):
                             except IndexError as e:
                                 continue
     print(f"Decoded data has been exported to {output_csv_path}")
+    dataFrame = pd.read_csv(output_csv_path)
+    dataFrame = dataFrame.interpolate(method='linear', limit_direction='forward', axis=0)
+    filled_data_path = os.path.join(
+        f"{output_path}", f"Linear Interpolation"
+    )
+    if not os.path.exists(filled_data_path):
+        os.makedirs(filled_data_path, exist_ok=True)
+    output_csv_path = os.path.join(
+        f"{filled_data_path}", f"linear_{file_name}"
+    )
+    try:
+        dataFrame.to_csv(output_csv_path, sep=',')
+    except Exception as e:
+        print("Unable to export {output_csv_path}")
+    print(f"Interpolated decoded data has been exported to {output_csv_path}")
+
 
 if __name__ == '__main__':
-    user_dbc_path = input("Enter dbc path. If using default leave blank: ")
-    if user_dbc_path != '':
-        db = cantools.database.load_file(user_dbc_path)
-        print("Updated dbc")
+    print(platform.platform())
+    # user_dbc_path = input("Enter dbc path. If using default leave blank: ")
+    # if user_dbc_path != '':
+    #     db = cantools.database.load_file(user_dbc_path)
+    #     print("Updated dbc")
     
-    
-    input_path = input("Enter input data path: ")
-    output_path = input("Enter output data path: ")
+    # input_path = r"K:\UCalgary Racing\UCR-01\5. Testing Data\2024-11-11 Lot 10 Aero Test and Drive Day 4\Raw Data\11-11\skidpad"
+    # output_path = r"K:\UCalgary Racing\UCR-01\5. Testing Data\2024-11-11 Lot 10 Aero Test and Drive Day 4\Decoded Data\Skid Pad"
+    # input_path = input("Enter input data path: ")
+    # output_path = input("Enter output data path: ")
+
+
     start = time.time()
-    files = os.listdir(input_path)
-    thing = list(zip(files, [input_path for s in range(len(files))], [output_path for s in range(len(files))], [db for s in range(len(files))]))
-
-    processes = multiprocessing.Pool(processes=(multiprocessing.cpu_count() - 1))
-    processes.starmap(parse_file, thing)
-
+    path = os.path.join("/mnt/k/UCalgary Racing/UCR-01/5. Testing Data/2024-11-10 Lot 10 Drive Day 3/Decoded Data/Endurance/Regular Data/", "regular_11-10_008.csv")
+    # path = "/mnt/k/UCalgary Racing/UCR-01/5. Testing Data/2024-11-11 Lot 10 Aero Test and Drive Day 4/Decoded Data/Auto Cross/Regular Data/regular_11-10_008.csv"
+    dataFrame = pd.read_csv(path)
+    dataFrame = dataFrame.interpolate(method='linear', limit_direction='forward', axis=0)
     end = time.time()
+    print("It took", end - start, "seconds with just pandas")
+    start = time.time()
+    dataFrame.to_csv('pandas.csv')
+    end = time.time()
+    print("It took", end - start, "seconds to write with pandas")
+    print(len(dataFrame))
 
-    print("It took", end - start, "seconds")
+    start = time.time()
+    dataFrame.to_feather('pandas.feather')
+    end = time.time()
+    print("It took", end - start, "seconds to write with pandas feather")
+    print(len(dataFrame))
+
+    # start = time.time()
+    # # dir_path = os.path.abspath(input_path)
+    # # all_files = ( os.path.join(basedir, filename) for basedir, dirs, files in os.walk(dir_path) for filename in files   )
+    # # sorted_files = sorted(all_files, key=os.path.getsize, reverse=True)
+    # # thing = list(zip(sorted_files, [input_path for s in range(len(sorted_files))], [output_path for s in range(len(sorted_files))], [db for s in range(len(sorted_files))]))
+    
+    
+    # # files = os.listdir(input_path)
+    # # thing = list(zip(files, [input_path for s in range(len(files))], [output_path for s in range(len(files))], [db for s in range(len(files))]))
+
+    # # processes = multiprocessing.Pool(processes=(multiprocessing.cpu_count() - 1))
+    # # processes.starmap(parse_file, thing)
+
+    # # path = "K:/UCalgary Racing/UCR-01/5. Testing Data/2024-11-11 Lot 10 Aero Test and Drive Day 4/Raw Data/11-11/autocross/11-11_025.csv"
+    start = time.time()
+    dataFrame = cudf.read_csv(path)
+    dataFrame = dataFrame.interpolate(method='linear', limit_direction='forward', axis=0)
+    end = time.time()
+    print("It took", end - start, "seconds to interpolate with cudf")
+    start = time.time()
+    dataFrame.to_csv('cudf.csv')  
+    end = time.time()
+    print("It took", end - start, "seconds to write with cudf")
+    print(len(dataFrame))
+
+    start = time.time()
+    dataFrame.to_feather('cudf.feather')  
+    end = time.time()
+    print("It took", end - start, "seconds to write with cudf feather")
+    print(len(dataFrame))
         
         
 
