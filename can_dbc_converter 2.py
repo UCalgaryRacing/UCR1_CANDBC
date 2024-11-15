@@ -169,24 +169,31 @@ if __name__ == '__main__':
     # output_path = input("Enter output data path: ")
 
 
-    start = time.time()
     path = os.path.join("/mnt/k/UCalgary Racing/UCR-01/5. Testing Data/2024-11-10 Lot 10 Drive Day 3/Decoded Data/Endurance/Regular Data/", "regular_11-10_008.csv")
     # path = "/mnt/k/UCalgary Racing/UCR-01/5. Testing Data/2024-11-11 Lot 10 Aero Test and Drive Day 4/Decoded Data/Auto Cross/Regular Data/regular_11-10_008.csv"
-    dataFrame = pd.read_csv(path)
-    dataFrame = dataFrame.interpolate(method='linear', limit_direction='forward', axis=0)
+
+    # PANDAS Rounded
+    data_Frame = pd.read_csv(path)
+    start = time.time()
+    data_Frame = data_Frame.interpolate(method='linear', limit_direction='forward', axis=0)
+    data_Frame[data_Frame.columns.difference([
+        "gnss_lat", "gnss_long", "gnss_height", "north_vel", "east_vel", "up_vel", "roll", 
+        "pitch", "azimuth", "lat", "long", "hgt", "lat_std_dev", "long_std_dev", "height_std_dev", "z_accel"
+        "neg_y_accel", "x_accel", "z_gyro","neg_y_gyro", "x_gyro"])].round(4)
     end = time.time()
     print("It took", end - start, "seconds with just pandas")
     start = time.time()
-    dataFrame.to_csv('pandas.csv')
+    data_Frame.to_csv('pandas.csv')
     end = time.time()
     print("It took", end - start, "seconds to write with pandas")
-    print(len(dataFrame))
+    print(len(data_Frame))
 
-    start = time.time()
-    dataFrame.to_feather('pandas.feather')
-    end = time.time()
-    print("It took", end - start, "seconds to write with pandas feather")
-    print(len(dataFrame))
+    # # PANDAS FEATHER
+    # start = time.time()
+    # data_Frame.to_feather('pandas.feather')
+    # end = time.time()
+    # print("It took", end - start, "seconds to write with pandas feather")
+    # print(len(data_Frame))
 
     # start = time.time()
     # # dir_path = os.path.abspath(input_path)
@@ -202,22 +209,38 @@ if __name__ == '__main__':
     # # processes.starmap(parse_file, thing)
 
     # # path = "K:/UCalgary Racing/UCR-01/5. Testing Data/2024-11-11 Lot 10 Aero Test and Drive Day 4/Raw Data/11-11/autocross/11-11_025.csv"
+
+    # # CUDF NORMAL
+    # start = time.time()
+    # data_Frame = cudf.read_csv(path)
+    # data_Frame = data_Frame.interpolate(method='linear', limit_direction='forward', axis=0)
+    # end = time.time()
+    # print("It took", end - start, "seconds to interpolate with cudf")
+    # start = time.time()
+    # data_Frame.to_csv('cudf.csv')
+    # end = time.time()
+    # print("It took", end - start, "seconds to write with cudf")
+    # print(len(data_Frame))
+
+    # CUDF Rounded
     start = time.time()
-    dataFrame = cudf.read_csv(path)
-    dataFrame = dataFrame.interpolate(method='linear', limit_direction='forward', axis=0)
+    data_Frame = cudf.read_csv(path)
+    data_Frame = data_Frame.interpolate(method='linear', limit_direction='forward', axis=0)
+    data_Frame[data_Frame.columns.difference([
+        "gnss_lat", "gnss_long", "gnss_height", "north_vel", "east_vel", "up_vel", "roll", 
+        "pitch", "azimuth", "lat", "long", "hgt", "lat_std_dev", "long_std_dev", "height_std_dev", "z_accel"
+        "neg_y_accel", "x_accel", "z_gyro","neg_y_gyro", "x_gyro"])].round(4)
     end = time.time()
     print("It took", end - start, "seconds to interpolate with cudf")
     start = time.time()
-    dataFrame.to_csv('cudf.csv')  
+    data_Frame.to_csv('cudf.csv')
     end = time.time()
     print("It took", end - start, "seconds to write with cudf")
-    print(len(dataFrame))
+    print(len(data_Frame))
 
-    start = time.time()
-    dataFrame.to_feather('cudf.feather')  
-    end = time.time()
-    print("It took", end - start, "seconds to write with cudf feather")
-    print(len(dataFrame))
-        
-        
 
+    # start = time.time()
+    # data_Frame.to_feather('cudf.feather')
+    # end = time.time()
+    # print("It took", end - start, "seconds to write with cudf feather")
+    # print(len(data_Frame))
