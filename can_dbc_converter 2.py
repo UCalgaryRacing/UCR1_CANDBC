@@ -5,7 +5,9 @@ import os
 import shutil
 import multiprocessing
 import time
-import itertools
+import pandas as pd
+import binascii
+import struct
 col = -2
 
 
@@ -23,7 +25,7 @@ class CanFrame:
             Timestamp: {self.timestamp}
             Channel: {self.channel}
             CAN ID: {self.can_id}
-            Flags: {self.flags}
+            Flags: {self.flags}•
             DLC: {self.dlc}
             Data: {self.data}
         """
@@ -36,6 +38,7 @@ def sort_key(header):
         return (1, header)  # Sort alphabetically for others
 
 dbc_path = "UCR-01.dbc"
+# dbc_path = "Cooling Test.dbc"
 db = cantools.database.load_file(dbc_path)
 
 def parse_file(file_name, input_folder, output_path, database):
@@ -44,11 +47,14 @@ def parse_file(file_name, input_folder, output_path, database):
         csv_path = os.path.join(input_folder, file_name)
         print(f"Processing file: {csv_path}")
 
-        if not os.path.exists(output_path):
-            os.makedirs(output_path)
+        plain_data_path = os.path.join(
+            f"{output_path}", f"Regular Data"
+        )
+        if not os.path.exists(plain_data_path):
+            os.makedirs(plain_data_path, exist_ok=True)
 
         output_csv_path = os.path.join(
-            f"{output_path}", f"decoded_{file_name}"
+            f"{plain_data_path}", f"regular_{file_name}"
         )
         print(output_csv_path)
 
@@ -111,7 +117,7 @@ def parse_file(file_name, input_folder, output_path, database):
                                     row[0], row[1], can_id, row[3], row[4], data
                                 )
                                 msg = database.decode_message(can_id, data)
-
+                                    
                                 row_data = [
                                     frame.timestamp,
                                     frame.channel,
@@ -130,6 +136,21 @@ def parse_file(file_name, input_folder, output_path, database):
                             except IndexError as e:
                                 continue
     print(f"Decoded data has been exported to {output_csv_path}")
+    dataFrame = pd.read_csv(output_csv_path)
+    dataFrame = dataFrame.interpolate(method='linear', limit_direction='forward', axis=0)
+    filled_data_path = os.path.join(
+        f"{output_path}", f"Linear Interpolation"
+    )
+    if not os.path.exists(filled_data_path):
+        os.makedirs(filled_data_path, exist_ok=True)
+    output_csv_path = os.path.join(
+        f"{filled_data_path}", f"linear_{file_name}"
+    )
+    try:
+        dataFrame.to_csv(output_csv_path, sep=',')
+    except Exception as e:
+        print("Unable to export {output_csv_path}")
+    print(f"Interpolated decoded data has been exported to {output_csv_path}")
 
 if __name__ == '__main__':
     user_dbc_path = input("Enter dbc path. If using default leave blank: ")
@@ -140,6 +161,7 @@ if __name__ == '__main__':
     
     input_path = input("Enter input data path: ")
     output_path = input("Enter output data path: ")
+
     start = time.time()
     files = os.listdir(input_path)
     thing = list(zip(files, [input_path for s in range(len(files))], [output_path for s in range(len(files))], [db for s in range(len(files))]))

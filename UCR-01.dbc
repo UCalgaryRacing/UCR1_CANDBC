@@ -584,12 +584,12 @@ BO_ 83 GNSS_BESTPOS: 48 GPS
 BO_ 84 RAWIMU: 48 GPS
  SG_ gnss_week : 0|32@1+ (1,0) [0|0] "" Vector__XXX
  SG_ gnss_seconds : 32|64@1- (1,0) [0|0] "" Vector__XXX
- SG_ z_accel : 96|32@1- (1,0) [0|0] "" Vector__XXX
- SG_ neg_y_accel : 128|32@1- (1,0) [0|0] "" Vector__XXX
- SG_ x_accel : 160|32@1- (1,0) [0|0] "" Vector__XXX
- SG_ z_gyro : 192|32@1- (1,0) [0|0] "" Vector__XXX
- SG_ neg_y_gyro : 224|32@1- (1,0) [0|0] "" Vector__XXX
- SG_ x_gyro : 256|32@1- (1,0) [0|0] "" Vector__XXX
+ SG_ z_accel : 96|32@1- (2.9927520752e-08,0) [0|0] "" Vector__XXX
+ SG_ neg_y_accel : 128|32@1- (2.9927520752e-08,0) [0|0] "" Vector__XXX
+ SG_ x_accel : 160|32@1- (2.9927520752e-08,0) [0|0] "" Vector__XXX
+ SG_ z_gyro : 192|32@1- (1.220703125e-07,0) [0|0] "" Vector__XXX
+ SG_ neg_y_gyro : 224|32@1- (1.220703125e-07,0) [0|0] "" Vector__XXX
+ SG_ x_gyro : 256|32@1- (1.220703125e-07,0) [0|0] "" Vector__XXX
 
 BO_ 600 BamoCarReTransmit: 4 SteeringWheel
  SG_ MotorTempRaw : 0|16@1+ (1,0) [0|0] "" Vector__XXX
